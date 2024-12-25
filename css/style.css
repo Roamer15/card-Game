@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(to right, #141e30, #243b55);
   color: white;
   line-height: 1.6;
@@ -17,7 +17,7 @@ body {
   align-items: center;
   padding: 10px 20px;
   background-color: #0009;
-  box-shadow: 0px 4px 8px #0003;
+  box-shadow: 0 4px 8px #0003;
 }
 
 .logo {
@@ -67,9 +67,11 @@ body {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -86,13 +88,13 @@ body {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0px 4px 8px #0000004d;
+  box-shadow: 0 4px 8px #0000004d;
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 12px #0008;
+  box-shadow: 0 6px 12px #0008;
 }
 
 .btn-mobile {
@@ -119,12 +121,12 @@ body {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px #0000004d;
+    box-shadow: 0 4px 8px #0000004d;
     transition: transform 0.2s, box-shadow 0.3s;
   }
 
   .btn-mobile:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px #0008;
+    box-shadow: 0 6px 12px #0008;
   }
 }
