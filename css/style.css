@@ -113,12 +113,11 @@ body {
   .btn-mobile {
     display: inline-block;
     margin-top: 2rem;
-    padding: 15px 30px;
+    padding: 0.8rem 1.6rem;
     background: linear-gradient(to right, #fdc830, #f37335);
-    color: white;
+    color: #fff;
     font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
+    font-weight: 900;
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 0 4px 8px #0000004d;
