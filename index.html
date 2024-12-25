@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Card Game</title>
 </head>
@@ -13,8 +14,13 @@
             <h1>Flip-in</h1>
         </div>
         <div class="options">
-            <a href="index.html">Home</a>
-            <a href="tutorial.html">How to Play</a>
+            <div class="anchor">
+                <a href="index.html">Home</a>
+                <a href="tutorial.html">How to Play</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </div>
     <div class="game-container">
@@ -22,7 +28,8 @@
             <div class="image">
                 <img src="images/cardhome.png" alt="logo">
             </div>
-            <button class="btn">Start Game</button>
+            <button class="btn">Start Game</button><br>
+            <button class="btn-mobile">How to Play</button>
         </div>
     </div>
     <script src="js/index.js"></script>

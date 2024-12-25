@@ -30,6 +30,15 @@ body {
   }
 }
 
+.options {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu {
+  display: none;
+}
+
 .options a {
   text-decoration: none;
   color: white;
@@ -50,6 +59,7 @@ body {
 }
 
 .card-image .image img {
+  width: 95%;
   animation: pulse 1.5s infinite;
 }
 
@@ -83,4 +93,39 @@ body {
 .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 12px #0008;
+}
+
+.btn-mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 767px){
+  .menu {
+    display: block;
+  }
+
+ .anchor {
+  display: none;
+ }
+
+ .btn-mobile {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px #0000004d;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-mobile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px #0008;
+}
 }
