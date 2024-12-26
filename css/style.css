@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0009;
+  box-shadow: 0 4px 8px #0003;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 100px;
+  }
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu {
+  display: none;
+}
+
+.options a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.options a:hover {
+  transition: border 0.3s ease;
+  border-bottom: 1px solid #fdc830;
+  color: #fdc830;
+}
+
+.game-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.card-image .image img {
+  width: 95%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px #0000004d;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px #0008;
+}
+
+.btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: block;
+  }
+
+  .anchor {
+    display: none;
+  }
+
+  .btn-mobile {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.6rem;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #0000004d;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+
+  .btn-mobile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #0008;
+  }
+}
