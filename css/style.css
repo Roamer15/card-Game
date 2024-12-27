@@ -59,7 +59,7 @@ body {
 }
 
 .card-image .image img {
-  width: 95%;
+  width: 50%;
   animation: pulse 1.5s infinite;
 }
 

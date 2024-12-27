@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+}
