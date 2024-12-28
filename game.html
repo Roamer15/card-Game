@@ -1,14 +1,122 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/game.css">
-    <title>Game</title>
+    <title>Card Matching Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+        }
+
+        .card {
+            width: 100px;
+            height: 150px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 8px;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .card.flipped {
+            background-color: #fff;
+            color: #333;
+            cursor: default;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div id="game-container">
+    <div class="game-container" id="gameContainer"></div>
+    <div class="message" id="message"></div>
 
-    </div>
-    <script src="js/game.js"></script>
+    <script>
+        const faces = ['🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🍑'];
+        const cards = [...faces, ...faces]; // Duplicate the faces to create pairs
+        let flippedCards = [];
+        let matchedCount = 0;
+
+        // Shuffle the cards
+        cards.sort(() => 0.5 - Math.random());
+
+        const gameContainer = document.getElementById('gameContainer');
+        const message = document.getElementById('message');
+
+        // Create card elements
+        cards.forEach((face, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.face = face;
+            card.innerHTML = "?"; // Hidden face
+            card.addEventListener('click', () => flipCard(card));
+            gameContainer.appendChild(card);
+        });
+
+        function flipCard(card) {
+            if (card.classList.contains('flipped') || flippedCards.length === 2) {
+                return;
+            }
+
+            card.classList.add('flipped');
+            card.innerHTML = card.dataset.face;
+            flippedCards.push(card);
+
+            if (flippedCards.length === 2) {
+                checkMatch();
+            }
+        }
+
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+
+            if (card1.dataset.face === card2.dataset.face) {
+                matchedCount += 2;
+                flippedCards = [];
+
+                if (matchedCount === cards.length) {
+                    message.textContent = 'Congratulations! You matched all the cards! 🎉 Thanks for playing!';
+                }
+            } else {
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    card1.innerHTML = "?";
+                    card2.innerHTML = "?";
+                    flippedCards = [];
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 </html>
