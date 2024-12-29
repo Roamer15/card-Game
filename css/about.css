@@ -17,6 +17,13 @@ body {
   text-align: center;
 
   h1 {
-    margin-bottom: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 3rem;
+    font-weight: bolder;
+  }
+
+  p {
+    line-height: 5vh;
+    justify-content: left;
   }
 }
