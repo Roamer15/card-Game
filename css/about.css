@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to right, #141e30, #243b55);
+  line-height: 5vh;
+}
+
+.description {
+  background: linear-gradient(to right, #141e30, #243b55);
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
