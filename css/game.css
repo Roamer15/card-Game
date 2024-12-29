@@ -5,24 +5,28 @@
 
 body {
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.game {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background: linear-gradient(to right, #141e30, #243b55);
-  ;
 }
 
 .game-container {
-display: grid;
-grid-template-columns: repeat(4, 200px);
-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 10px;
+  padding: 1rem;
 }
 
 .card {
   width: 200px;
-  height: 250px;
+  height: 300px;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -40,7 +44,7 @@ gap: 10px;
 }
 
 .card.flipped {
-  background-color: #fff;
+  background: linear-gradient(to right, #fdc830, #f37335);
   color: #333;
   cursor: default;
 }
@@ -50,7 +54,9 @@ gap: 10px;
 }
 
 .message {
+  position: absolute;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 4rem;
+  color: #fff;
   text-align: center;
 }
