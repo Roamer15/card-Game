@@ -6,7 +6,7 @@ let matchedCount = 0
 // Shuffle the cards
 cards.sort(() => 0.5 - Math.random())
 
-const gameContainer = document.getElementById('gameContainer')
+const gameContainer = document.getElementById('game-container')
 const message = document.getElementById('message')
 
 // Create card elements
@@ -20,6 +20,8 @@ cards.forEach((face, index) => {
 })
 
 function flipCard (card) {
+  const sound = document.getElementById('sound')
+  sound.play()
   if (card.classList.contains('flipped') || flippedCards.length === 2) {
     return
   }
