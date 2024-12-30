@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -19,20 +19,26 @@ body {
 
 .game-container {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(2, 120px);
   gap: 10px;
   padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
 .card {
-  width: 200px;
-  height: 300px;
+  width: 120px;
+  height: 180px;
   background-color: #333;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 8px;
   transform: scale(1);
@@ -56,7 +62,7 @@ body {
 .message {
   position: absolute;
   margin-top: 20px;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #fff;
   text-align: center;
 }
