@@ -55,3 +55,8 @@ function checkMatch () {
     }, 1000)
   }
 }
+
+const button = document.getElementById('refresh-button')
+button.addEventListener('click', () => {
+  location.reload()
+})
