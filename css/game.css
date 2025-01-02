@@ -26,7 +26,7 @@ body {
 
 @media (min-width: 768px) {
   .game-container {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, 180px);
   }
 }
 
@@ -60,9 +60,23 @@ body {
 }
 
 .message {
-  position: absolute;
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 2rem;
   color: #fff;
   text-align: center;
+}
+
+#refresh-button {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px #0000004d;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
