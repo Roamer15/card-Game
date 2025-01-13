@@ -131,7 +131,6 @@ body {
 
   .btn-mobile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px #0008;
     box-shadow: 0 6px 12px #fdcc4f88;
   }
 }
