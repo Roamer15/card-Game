@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
 }
@@ -6,12 +6,16 @@
 body {
   box-sizing: border-box;
   background: linear-gradient(to right, #141e30, #243b55);
-  line-height: 5vh;
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to right, #141e30, #243b55);
   margin-top: 20px;
+  padding: 2rem 0;
   font-size: 1.6rem;
   color: #fff;
   text-align: center;
@@ -25,5 +29,75 @@ body {
   p {
     line-height: 5vh;
     justify-content: left;
+  }
+} */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to right, #141e30, #243b55);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styling */
+.description {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #56555533;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  color: #fdc830;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #1e3c72;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Paragraphs */
+.description p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Button */
+.description p:last-of-type {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
