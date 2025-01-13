@@ -8,12 +8,6 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  color: #eee;
-  text-decoration: underline;
-  margin: 1rem;
-}
-
 .game {
   display: flex;
   flex-direction: column;
@@ -32,13 +26,13 @@ h1 {
 
 @media (min-width: 768px) {
   .game-container {
-    grid-template-columns: repeat(4, 11rem);
+    grid-template-columns: repeat(4, 10rem);
   }
 }
 
 .card {
   width: 100%;
-  height: 11rem;
+  height: 10rem;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -46,8 +40,9 @@ h1 {
   align-items: center;
   font-size: 2rem;
   cursor: pointer;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transform: scale(1);
+  box-shadow: 2px 1px 1px 1px #04bacf;
   transition: transform 0.3s;
 }
 
@@ -72,9 +67,46 @@ h1 {
   text-align: center;
 }
 
+/* .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  display: flex;
+  align-items: center;
+} */
+
+/* Style for the top container */
+.top {
+  display: flex; /* Use Flexbox */
+  justify-content: space-between; /* Space out the items evenly */
+  align-items: center; /* Vertically center the items */
+  background-color: #1e3c72; /* Optional: background color for the top bar */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Add some padding for spacing */
+  border-bottom: 2px solid #fdc830; /* Optional: bottom border for a styled look */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading styles */
+.top h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Score display styles */
+#score {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+
 #refresh-button {
   display: inline-block;
-  margin-top: 3rem;
   padding: 15px 30px;
   background: linear-gradient(to right, #fdc830, #f37335);
   color: white;
@@ -97,3 +129,120 @@ h1 {
 #refresh-button:focus {
   transform: scale(0.7);
 }
+
+/* Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Game Wrapper */
+/* .game {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+} */
+
+/* Top Bar */
+/* .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.top h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#score {
+  font-size: 1.2rem;
+  font-weight: bold;
+} */
+
+/* Message Section */
+/* .message {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fdc830;
+  font-weight: bold;
+} */
+
+/* Game Container */
+/* .game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+} */
+
+/* Cards */
+/* .card {
+  width: 100%;
+  height: 150px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card.flipped {
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: #000;
+  cursor: default;
+}
+
+.card.matched {
+  background: #4caf50;
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+} */
+
+/* Reset Button */
+/* #refresh-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #f37335;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#refresh-button:hover {
+  background: #fdc830;
+}  */

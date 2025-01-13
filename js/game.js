@@ -1,4 +1,4 @@
-const faces = ['🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🍑']
+const faces = ['🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🍉 ']
 const cards = [...faces, ...faces] // Duplicate the faces to create pairs
 let flippedCards = []
 let matchedCount = 0
@@ -8,6 +8,7 @@ cards.sort(() => 0.5 - Math.random())
 
 const gameContainer = document.getElementById('game-container')
 const message = document.getElementById('message')
+const score = document.getElementById('score')
 
 // Create card elements
 cards.forEach((face, index) => {
@@ -33,6 +34,16 @@ function flipCard (card) {
   if (flippedCards.length === 2) {
     checkMatch()
   }
+
+  countMoves()
+}
+
+let count = 0
+
+function countMoves() {
+ 
+  count++
+  score.textContent = `Moves: ${count}`
 }
 
 function checkMatch () {
