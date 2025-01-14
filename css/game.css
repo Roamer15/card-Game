@@ -80,7 +80,6 @@ body {
   background: linear-gradient(to right, #fdc830 10%, #25abe8 50%, #25e8b7 40%);
   background-clip: border-box;
   background-size: 200% auto;
-  background-clip: text;
   fill: transparent;
   animation: textclip 1.5s linear infinite;
 }
