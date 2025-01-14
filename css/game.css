@@ -77,10 +77,12 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to right, #fdc830 10%, #25abe8 50%, #25e8b7 40%);
+  background: linear-gradient(to right,#fdc830 10%, #25abe8 50%, #25e8b7 40%);
   background-clip: border-box;
   background-size: 200% auto;
   fill: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: textclip 1.5s linear infinite;
 }
 
