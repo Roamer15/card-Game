@@ -70,3 +70,8 @@ const button = document.getElementById('refresh-button')
 button.addEventListener('click', () => {
   location.reload()
 })
+
+const buttonDirect = document.getElementById('home-redirect')
+buttonDirect.addEventListener('click', () => {
+  window.location.href = 'index.html'
+})
