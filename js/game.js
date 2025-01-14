@@ -40,8 +40,7 @@ function flipCard (card) {
 
 let count = 0
 
-function countMoves() {
- 
+function countMoves () {
   count++
   score.textContent = `Moves: ${count}`
 }

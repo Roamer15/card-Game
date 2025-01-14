@@ -15,6 +15,7 @@ body {
   background: linear-gradient(to right, #141e30, #243b55);
   justify-content: center;
   align-items: center;
+  animation: fadein 1s ease-in-out;
 }
 
 .game-container {
@@ -22,11 +23,19 @@ body {
   grid-template-columns: repeat(2, 120px);
   gap: 10px;
   padding: 1rem;
+  margin-bottom: 1rem;
+  transition: ease-in-out 2s;
 }
 
-@media (min-width: 768px) {
-  .game-container {
-    grid-template-columns: repeat(4, 10rem);
+@keyframes fadein {
+  from {
+    opacity: 0.1;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -42,7 +51,7 @@ body {
   cursor: pointer;
   /* border-radius: 10px; */
   transform: scale(1);
-  box-shadow: 2px 1px 1px 1px #04bacf;
+  box-shadow: 2px 1px 1px 1px #121212;
   transition: transform 0.3s;
 }
 
@@ -67,26 +76,16 @@ body {
   text-align: center;
 }
 
-/* .top {
+.top {
   display: flex;
   justify-content: space-between;
-}
-
-#score {
-  display: flex;
   align-items: center;
-} */
-
-/* Style for the top container */
-.top {
-  display: flex; /* Use Flexbox */
-  justify-content: space-between; /* Space out the items evenly */
-  align-items: center; /* Vertically center the items */
-  background-color: #1e3c72; /* Optional: background color for the top bar */
-  color: #fff; /* Text color */
-  padding: 10px 20px; /* Add some padding for spacing */
-  border-bottom: 2px solid #fdc830; /* Optional: bottom border for a styled look */
+  background-color: #1e3c72;
+  color: #fff;
+  padding: 10px 20px;
+  border-bottom: 2px solid #fdc830;
   font-family: 'Arial', sans-serif;
+  transition: ease-in-out 0.6s;
 }
 
 /* Heading styles */
@@ -128,6 +127,12 @@ body {
 
 #refresh-button:focus {
   transform: scale(0.7);
+}
+
+@media (min-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(4, 10rem);
+  }
 }
 
 /* Global Styles

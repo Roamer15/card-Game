@@ -42,7 +42,6 @@ body {
   padding-bottom: 10px;
 }
 
-/* Paragraphs */
 .description p {
   font-size: 1.1rem;
   margin: 15px 0;
@@ -50,14 +49,12 @@ body {
   line-height: 1.8;
 }
 
-/* Button */
 .description p:last-of-type {
   margin-top: 20px;
   font-size: 1rem;
   color: #555;
 }
 
-/* Animations */
 @keyframes fadein {
   from {
     opacity: 0;
