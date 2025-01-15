@@ -66,16 +66,18 @@ body {
 }
 
 .card.animate {
-  animation: rotateCard 0.5s ease-in-out;
+  animation: rotatecard 0.5s ease-in-out;
 }
 
-@keyframes rotateCard {
+@keyframes rotatecard {
   0% {
     transform: scale(1) rotateY(0deg);
   }
+
   50% {
     transform: scale(1.2) rotateY(90deg);
   }
+
   100% {
     transform: scale(1) rotateY(180deg);
   }
