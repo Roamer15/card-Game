@@ -9,22 +9,26 @@
     
 </head>
 <body>
+    <div class="top">
+        <h1>Memory Game</h1>
+        <div id="score">Moves: 0</div>
+        <button id="home-redirect" data-href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <a href="index.html"></a>
+        </button>
+    </div>
     <div class="game">
-        <div class="top">
-            <h1>Memory Game</h1>
-            <div id="score">Moves: 0</div>
-            <button id="home-redirect" data-href="index.html">
-                <i class="fa-solid fa-house"></i>
-                <a href="index.html"></a>
-            </button>
-        </div>
+      
         <div class="message" id="message"></div>
         <div class="game-container" id="game-container"></div>
         <button id="refresh-button">RESET GAME</button>
     
     </div>
+    <div class="pause">
+        <button id="pause-btn"><i class="fa-sharp fa-solid fa-music"></i></button>
+    </div>
     <audio src="images/flipcard-91468.mp3" id="sound"></audio>
-    <audio src="images/game-music-teste-204327.mp3" autoplay loop></audio>
+    <audio src="images/game-music-teste-204327.mp3" autoplay loop id="background-music"></audio>
     <script src="js/game.js"></script>
 </body>
 </html>

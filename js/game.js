@@ -19,23 +19,30 @@ cards.forEach((face, index) => {
   card.addEventListener('click', () => flipCard(card))
   gameContainer.appendChild(card)
 })
-
 function flipCard (card) {
   const sound = document.getElementById('sound')
   sound.play()
+
   if (card.classList.contains('flipped') || flippedCards.length === 2) {
     return
   }
 
-  card.classList.add('flipped')
-  card.innerHTML = card.dataset.face
-  flippedCards.push(card)
+  // Add animation class for the rotating effect
+  card.classList.add('animate')
 
-  if (flippedCards.length === 2) {
-    checkMatch()
-  }
+  // Wait for the animation to finish before flipping
+  setTimeout(() => {
+    card.classList.add('flipped')
+    card.innerHTML = card.dataset.face // Show the face of the card
+    flippedCards.push(card)
 
-  countMoves()
+    if (flippedCards.length === 2) {
+      checkMatch()
+    }
+
+    countMoves()
+    card.classList.remove('animate') // Remove animation class after rotation
+  }, 500)
 }
 
 let count = 0
@@ -75,3 +82,17 @@ const buttonDirect = document.getElementById('home-redirect')
 buttonDirect.addEventListener('click', () => {
   window.location.href = 'index.html'
 })
+
+const pauseButton = document.getElementById('pause-btn')
+
+pauseButton.addEventListener('click', togglePlay)
+
+function togglePlay () {
+  const pauseSound = document.getElementById('background-music')
+
+  if (pauseSound.paused) {
+    pauseSound.play()
+  } else {
+    pauseSound.pause()
+  }
+}

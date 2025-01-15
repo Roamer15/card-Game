@@ -6,22 +6,21 @@
 body {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
+  background: linear-gradient(to right, #141e30, #243b55);
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(to right, #141e30, #243b55);
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
   animation: fadein 1s ease-in-out;
-  padding: 2rem;
 }
 
 .game-container {
   display: grid;
-  grid-template-columns: repeat(2, 120px);
+  grid-template-columns: repeat(4, 70px);
   gap: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -39,10 +38,9 @@ body {
     transform: translateY(0);
   }
 }
-
 .card {
-  width: 100%;
-  height: 10rem;
+  height: 7rem;
+  width: 7rem;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -50,23 +48,43 @@ body {
   align-items: center;
   font-size: 2rem;
   cursor: pointer;
-  transform: scale(1);
+  border-radius: 5px;
+  transform: scale(1) rotateY(0);
+  transform-style: preserve-3d;
   box-shadow: 2px 1px 1px 1px #121212;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .card:hover {
   transform: scale(1.1);
 }
 
-.card .flipped {
-  background: linear-gradient(to right, #fdc830, #f37335);
-  color: #333;
-  cursor: default;
+.card.flipped {
+  background-color: #f37335; /* Change background color when flipped */
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card.animate {
+  animation: rotateCard 0.5s ease-in-out;
+}
+
+@keyframes rotateCard {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(180deg);
+  }
 }
 
 .hidden {
   visibility: hidden;
+  transform: rotateY(180deg);
+  background: linear-gradient(to right, #fdc830, #f37335);
 }
 
 /* stylelint-disable property-no-vendor-prefix */
@@ -104,6 +122,7 @@ body {
   border-bottom: 2px solid #fdc830;
   font-family: Arial, sans-serif;
   transition: ease-in-out 0.6s;
+  margin: 0;
 
   button {
     background-color: transparent;
@@ -155,11 +174,30 @@ body {
 }
 
 #refresh-button:focus {
-  transform: scale(0.7);
+  transform: scale(0.9);
+}
+
+.pause {
+  padding: 0.5rem;
+  color: #fff;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-self: right;
+
+  button {
+    padding: 0.7rem;
+    border: 2px solid #fdc830;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 768px) {
   .game-container {
-    grid-template-columns: repeat(4, 10rem);
+    grid-template-columns: repeat(4, 7rem);
   }
 }
