@@ -38,6 +38,7 @@ body {
     transform: translateY(0);
   }
 }
+
 .card {
   height: 7rem;
   background-color: #333;
