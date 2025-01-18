@@ -1,29 +1,89 @@
+/* General Reset */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
   background: linear-gradient(to right, #141e30, #243b55);
-  line-height: 5vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Container Styling */
 .description {
-  background: linear-gradient(to right, #141e30, #243b55);
-  margin-top: 20px;
-  font-size: 1.6rem;
-  color: #fff;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #56555533;
+  padding: 30px;
   text-align: center;
+  animation: fadein 1s ease-in-out;
+}
 
-  h1 {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    margin-bottom: 3rem;
-    font-weight: bolder;
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  color: #fdc830;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #1e3c72;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.description p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+.description p:last-of-type {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  p {
-    line-height: 5vh;
-    justify-content: left;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px #0000004d;
+  transition: transform 0.2s, box-shadow 0.3s;
+  animation: fadein 1s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px #fdcc4f88;
 }

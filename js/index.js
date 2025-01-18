@@ -2,9 +2,13 @@ const play = document.querySelector('.btn')
 const learn = document.querySelector('.btn-mobile')
 
 play.addEventListener('click', () => {
-  window.location.href = 'game.html'
+  setTimeout(() => {
+    window.location.href = 'game.html'
+  }, 1000)
 })
 
 learn.addEventListener('click', () => {
-  window.location.href = 'about.html'
+  setTimeout(() => {
+    window.location.href = 'about.html'
+  }, 1000)
 })

@@ -52,18 +52,23 @@ body {
 }
 
 .options a:hover {
-  transition: border 0.3s ease;
+  transition: ease-in-out 0.4s;
   border-bottom: 1px solid #fdc830;
   color: #fdc830;
 }
 
 .game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 5rem 2rem;
+  margin-top: 2rem;
 }
 
 .card-image .image img {
-  width: 50%;
+  width: 100%;
   animation: pulse 1.5s infinite;
 }
 
@@ -98,7 +103,7 @@ body {
 
 .btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px #0008;
+  box-shadow: 0 6px 12px #fdcc4f88;
 }
 
 .btn-mobile {
@@ -130,6 +135,6 @@ body {
 
   .btn-mobile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px #0008;
+    box-shadow: 0 6px 12px #fdcc4f88;
   }
 }
